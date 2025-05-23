@@ -1,0 +1,38 @@
+/* Fonts */
+@import 'https://fonts.googleapis.com/css2?family=Inclusive+Sans:ital,wght@0,300..700;1,300..700&family=Space+Grotesk:wght@300..700&display=swap';
+
+/* Tailwind */
+@import "tailwindcss";
+
+/* Components */
+
+/* - Menu */
+@import './menu/menuButton.css';
+
+/* - CTAs */
+@import './ctas/cta.css';
+
+
+
+/* Theme customization */
+@theme {
+  --font-primary: 'Space Grotesk', sans-serif;
+  --font-secondary: 'Inclusive Sans', sans-serif;
+  --color-primary: #ffccd6;
+}
+
+h1 {
+  @apply font-primary font-bold text-5xl;
+}
+
+h2 {
+  @apply font-primary font-bold text-4xl;
+}
+
+h3 {
+  @apply font-primary font-bold text-3xl;
+}
+
+h4 {
+  @apply font-primary font-bold text-2xl;
+}

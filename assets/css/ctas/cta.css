@@ -1,0 +1,19 @@
+.cta-button {
+  @apply inline-block py-3 px-6 rounded-full font-semibold no-underline transition duration-300 ease-in-out;
+}
+
+.cta-button.primary {
+  @apply bg-black text-white;
+}
+
+.cta-button.primary:hover {
+  @apply bg-black;
+}
+
+.cta-button.secondary {
+  @apply bg-transparent text-black border-2 border-black;
+}
+
+.cta-button.secondary:hover {
+  @apply bg-gray-50/50
+}
