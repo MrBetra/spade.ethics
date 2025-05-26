@@ -60,7 +60,7 @@ const getComponent = (item) => {
 };
 
 function getImageUrl(image) {
-  return runtimeConfig.public.strapiUrl + image.url;
+  return image.url;
 }
 
 </script>
