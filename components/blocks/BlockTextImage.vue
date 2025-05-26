@@ -56,7 +56,11 @@ const content = computed(() => props.block.content || {});
 const isImageRight = computed(() => content.value.imagePosition === 'Right');
 
 function getImageUrl(image) {
-  return runtimeConfig.public.strapiUrl + image.url;
+  if (runtimeConfig.public.environment === "development") {
+    return runtimeConfig.public.strapiUrl + image.url;
+  } else {
+    return image.url
+  }
 }
 
 </script>

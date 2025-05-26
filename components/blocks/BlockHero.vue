@@ -44,7 +44,11 @@ const props = defineProps({
 
 
 function getImageUrl(image) {
-  return runtimeConfig.public.strapiUrl + image.url;
+  if (runtimeConfig.public.environment === "development") {
+    return runtimeConfig.public.strapiUrl + image.url;
+  } else {
+    return image.url
+  }
 }
 
 </script>
