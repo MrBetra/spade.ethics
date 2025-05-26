@@ -265,6 +265,8 @@ watch(() => [route.query.category, route.query.page], ([newCategory, newPage]) =
 
 
 function getImageUrl(image) {
+  console.log("mode", runtimeConfig.public.environment);
+  console.log("image", image);
   return runtimeConfig.public.strapiUrl + image.url;
 }
 

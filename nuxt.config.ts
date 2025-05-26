@@ -30,7 +30,8 @@ export default defineNuxtConfig({
   // Variables d'environnement accessibles côté client
   runtimeConfig: {
     public: {
-      strapiUrl: process.env.NUXT_STRAPI_URL || 'http://localhost:1337'
+      strapiUrl: process.env.NUXT_STRAPI_URL || 'http://localhost:1337',
+      environment: process.env.NODE_ENV,
     }
   },
 
