@@ -1,6 +1,7 @@
 import tailwindcss from "@tailwindcss/vite";
 
 export default defineNuxtConfig({
+
   devtools: {
     enabled: true,
     timeline: {
@@ -21,7 +22,7 @@ export default defineNuxtConfig({
   },
 
   strapi: {
-    url: 'http://localhost:1337',
+    url: process.env.NUXT_STRAPI_URL || 'http://localhost:1337',
     version: 'v5',
     prefix: '/api',
   },
@@ -29,7 +30,7 @@ export default defineNuxtConfig({
   // Variables d'environnement accessibles côté client
   runtimeConfig: {
     public: {
-      strapiUrl: 'http://localhost:1337'
+      strapiUrl: process.env.NUXT_STRAPI_URL || 'http://localhost:1337'
     }
   },
 
